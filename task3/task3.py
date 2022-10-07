@@ -109,6 +109,10 @@ def task(csvString):
         if (lvl[i][1] == val):
             count += 1
             cls.append(lvl[i][0])
+        elif(lvl[i][1] == val):
+            if (count > 1):
+                for k in range(len(cls)):
+                    r5.append(cls[k])
         else:
             if (count > 1):
                 for k in range(len(cls)):
@@ -117,6 +121,9 @@ def task(csvString):
             val = lvl[i][1]
             cls.clear()
             cls.append(lvl[i][0])
+    if (count > 1):
+                for k in range(len(cls)):
+                    r5.append(cls[k])
             
     out.append(r5)
 
